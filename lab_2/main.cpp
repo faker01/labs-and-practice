@@ -2,8 +2,10 @@
 #include <cstring>
 
 
-class String 
-{
+using namespace std;
+
+
+class String {
 private:
     size_t size;
     char* str;
@@ -67,31 +69,31 @@ public:
 
     bool operator < (const String& other)
     {
-        return std::strcmp(str, other.str) < 0;
+        return strcmp(str, other.str) < 0;
     }
 
     bool operator > (const String& other)
     {
-        return std::strcmp(str, other.str) > 0;
+        return strcmp(str, other.str) > 0;
     }
 
     bool operator == (const String& other)
     {
-        return std::strcmp(str, other.str) == 0;
+        return strcmp(str, other.str) == 0;
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const String& s)
+    friend ostream& operator<<(ostream& os, const String& s)
     {
         os << s.str;
         return os;
     }
 
-    friend std::istream& operator>>(std::istream& is, String& s)
+    friend istream& operator>>(istream& is, String& s)
     {
         const int m_s = 256;
         char buffer[m_s];
         if (is.getline(buffer, m_s)) {
-            s.size = std::strlen(buffer);
+            s.size = strlen(buffer);
             s.str = new char[s.size + 1];
             strcpy_s(s.str, s.size + 1, buffer);
         }
@@ -129,9 +131,35 @@ public:
 };
 
 
-int main() 
-{
+int main() {
     String s1;
     String s2;
+    String s3;
+
+    cin >> s1;
+	cin >> s2;
+
+    cout << (s1 > s2) << endl;
+    cout << (s1 < s2) << endl;
+    cout << (s1 == s2) << endl;
+
+	cout << s1 << endl;
+	cout << s2 << endl;
+	s3 = s1 + s2;
+	cout << s3 << endl;
+
+	s1 += s2;
+	cout << s1 << endl;
+
+    char letter;
+    cin >> letter;
+    cout << s1.find(letter) << endl;
+
+    cout << s1.length() << endl;
+    cout << s1.at(6) << endl;
+    cout << s1.c_str() << endl;
+    cout << s1[1] << endl;
+    s1[1] = 'k';
+    cout << s1;
     return 0;
 }
