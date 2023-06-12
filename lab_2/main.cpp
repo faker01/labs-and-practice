@@ -2,7 +2,8 @@
 #include <cstring>
 
 
-class String {
+class String 
+{
 private:
     size_t size;
     char* str;
@@ -128,7 +129,8 @@ public:
 };
 
 
-int main() {
+int main() 
+{
     String s1;
     String s2;
     return 0;
