@@ -1,0 +1,8 @@
+Electricity_Meter Меркурий_230
+Electricity_Meter Нева_МТ314
+Electricity_Meter Энергомера_CE308
+Heating_Control_Block Ouman_S203
+Heating_Control_Block Овен_ТРМ232
+Discrete_Input_Block Reallab_NL-16HV
+Discrete_Input_Block Приборэлектро_PRE-16
+Discrete_Input_Block Энергосервис_ЭНМВ-1-24
