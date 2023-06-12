@@ -5,7 +5,8 @@
 using namespace std;
 
 
-class String {
+class String 
+{
 private:
     size_t size;
     char* str;
